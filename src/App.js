@@ -13,11 +13,18 @@ import NotFound from "./components/Pages/NotFound";
 import AddUser from "./components/users/AddUser";
 import EditUser from "./components/users/EditUser";
 import User from "./components/users/User";
+import Login from "./components/users/Login";
+import Register from "./components/users/Register";
+
+import { ToastContainer } from "react-toastify";
+import Footer from "./components/layout/Footer";
+
 function App() {
   return (
     <Router>
       <div className="App">
         <Navbar />
+        <ToastContainer></ToastContainer>
         <Routes>
           <Route path="/" element={<Home />} />
           <Route exact path="/admin" element={<Admin />} />
@@ -27,9 +34,11 @@ function App() {
           <Route exact path="/users/add" element={<AddUser />} />
           <Route exact path="/users/edit/:id" element={<EditUser />} />
           <Route exact path="/users/:id" element={<User />} />
-
+          <Route path="/login" element={<Login />}></Route>
+          <Route path="/register" element={<Register />}></Route>
           <Route path="*" element={<NotFound />} />
         </Routes>
+        <Footer></Footer>
       </div>
     </Router>
   );

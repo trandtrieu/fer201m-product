@@ -2,10 +2,13 @@ import React from "react";
 import { Link, NavLink } from "react-router-dom";
 const Navbar = () => {
   return (
-    <nav className="navbar navbar-expand-lg navbar-dark bg-primary">
+    <nav
+      className="navbar navbar-expand-lg navbar-dark bg-dark"
+      style={{ backgroundColor: "#e3f2fd" }}
+    >
       <div className="container">
         <Link className="navbar-brand" href="/">
-          Recat User
+          TRIEU
         </Link>
         <button
           className="navbar-toggler"
@@ -19,7 +22,7 @@ const Navbar = () => {
           <span className="navbar-toggler-icon"></span>
         </button>
 
-        <div className="collapse navbar-collapse">
+        <div className="collapse navbar-collapse ">
           <ul className="navbar-nav mr-auto">
             <li className="nav-item">
               <NavLink className="nav-link" exact to="/">
@@ -39,6 +42,11 @@ const Navbar = () => {
             <li className="nav-item">
               <NavLink className="nav-link" exact to="/contact">
                 Contact
+              </NavLink>
+            </li>
+            <li className="nav-item">
+              <NavLink className="nav-link" exact to="/login">
+                Login
               </NavLink>
             </li>
           </ul>
